@@ -1,10 +1,10 @@
 === Quote Master ===
 Contributors: fpcorso
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RTGYAETX36ZQJ
-Tags: quote, text, widget, shortcode, post
+Tags: quote, text, widget, shortcode, post, sidebar, page, random
 Requires at least: 3.7.1
-Tested up to: 3.9.1
-Stable tag: 6.3.4
+Tested up to: 4.1
+Stable tag: 6.3.5
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin gives you the ability to add, edit, and delete quotes and display them randomly.
@@ -22,7 +22,11 @@ Features include:
 * Built-in widget
 * Includes 10 Quotes To Get You Started
 
-Be sure to check out all of our plugins in our Master Suite. Visit our plugins page for details: (http://mylocalwebstop.com/wordpress-plugins/)
+= Demoes! =
+You can check out the demo here: [Demo Quotes](http://mylocalwebstop.com/quote-master/)!
+
+= Make Suggestions Or Contribute =
+Quote Master is on [GitHub](https://github.com/fpcorso/quote_master/)!
 
 == Installation ==
 
@@ -58,6 +62,10 @@ Feel free to use the widget on the help page within the plugin or from the conta
 2. Quote Master Widget
 
 == Changelog ==
+
+= 6.3.5 (December 31, 2014) =
+ * Tested To WordPress Version 4.1
+ * Minor Design Changes
 
 = 6.3.4 (June 7, 2014) =
  * Fixed Quotation Mark Bug
@@ -215,6 +223,9 @@ Feel free to use the widget on the help page within the plugin or from the conta
 	* 19 Quotes
 	
 == Upgrade Notice ==
+
+= 6.3.5 =
+Minor design changes
 
 = 6.3.4 =
 This update fixes multiple bugs.
