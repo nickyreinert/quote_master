@@ -1,25 +1,21 @@
 <?php
-
-
-/*
-Plugin Name: Quote Master
-Description: Use this plugin to add quotes to your website.
-Version: 6.3.4
-Author: Frank Corso
-Author URI: http://www.mylocalwebstop.com/
-Plugin URI: http://www.mylocalwebstop.com/
-*/
-
-/* 
-Copyright 2014, My Local Webstop (email : fpcorso@mylocalwebstop.com)
-
-Disclaimer of Warranties. 
-
-The plugin is provided "as is". My Local Webstop and its suppliers and licensors hereby disclaim all warranties of any kind, 
-express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. 
-Neither My Local Webstop nor its suppliers and licensors, makes any warranty that the plugin will be error free or that access thereto will be continuous or uninterrupted.
-You understand that you install, operate, and unistall the plugin at your own discretion and risk.
-*/
+/**
+ * Plugin Name: Quote Master
+ * Plugin URI: http://mylocalwebstop.com
+ * Description: Use this plugin to add quotes to your website.
+ * Author: Frank Corso
+ * Author URI: http://mylocalwebstop.com
+ * Version: 6.3.5
+ *
+ * Disclaimer of Warranties
+ * The plugin is provided "as is". My Local Webstop and its suppliers and licensors hereby disclaim all warranties of any kind, 
+ * express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. 
+ * Neither My Local Webstop nor its suppliers and licensors, makes any warranty that the plugin will be error free or that access thereto will be continuous or uninterrupted.
+ * You understand that you install, operate, and uninstall the plugin at your own discretion and risk.
+ * 
+ * @author Frank Corso
+ * @version 6.3.5
+ */
 
 ///Files to Include
 include("includes/mlw_quotes_admin.php");
