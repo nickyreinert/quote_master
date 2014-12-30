@@ -1,4 +1,4 @@
-quote_master
+Quote Master
 ============
 
-Quote Master - A WordPress Plugin
+A WordPress Plugin
