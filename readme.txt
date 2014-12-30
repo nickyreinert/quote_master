@@ -22,6 +22,9 @@ Features include:
 * Built-in widget
 * Includes 10 Quotes To Get You Started
 
+= Demoes! =
+You can check out the demo here: [Demo Quotes](http://mylocalwebstop.com/quote-master/)!
+
 = Make Suggestions Or Contribute =
 Quote Master is on [GitHub](https://github.com/fpcorso/quote_master/)!
 
