@@ -1,12 +1,6 @@
 <?php
-/*
-Generates the support for Quote Master
-Copyright 2014, My Local Webstop (email : fpcorso@mylocalwebstop.com)
-*/
-
-
 function mlw_quotes_generate_help_page()
-{	
+{
 	echo "
 		<script>
 		function mlw_validateForm()
@@ -53,12 +47,12 @@ function mlw_quotes_generate_help_page()
 		}
 		div.mlw_quotes_email_support input[type='text'] {
 		border-color:#000000;
-		color:#3300CC; 
+		color:#3300CC;
 		cursor:hand;
 		}
 		textarea{
 		border-color:#000000;
-		color:#3300CC; 
+		color:#3300CC;
 		cursor:hand;
 		}
 		div.donation {
@@ -86,25 +80,25 @@ function mlw_quotes_generate_help_page()
 	</style>
 	<div class="wrap">
 	<h2>Quote Master Help And Support</h2>
-	
+
 	<h3>Version <?php echo $mlw_quotes_version; ?></h3>
 	<?php echo mlw_quotes_show_adverts(); ?>
 	<div style="float:left; width:33%;" class="inner-sidebar1">
-		<?php do_meta_boxes('mlw_quotes_wpss3','advanced','');  ?>	
+		<?php do_meta_boxes('mlw_quotes_wpss3','advanced','');  ?>
 	</div>
-	
+
 	<div style="float:left; width:33%; " class="inner-sidebar1">
-		<?php do_meta_boxes('mlw_quotes_wpss5','advanced',''); ?>	
+		<?php do_meta_boxes('mlw_quotes_wpss5','advanced',''); ?>
 	</div>
-	
+
 	<div style="float:left; width:33%; " class="inner-sidebar1">
-		<?php if ( get_option('mlw_advert_shows') == 'true' ) {do_meta_boxes('mlw_quotes_wpss6','advanced','');} ?>	
+		<?php if ( get_option('mlw_advert_shows') == 'true' ) {do_meta_boxes('mlw_quotes_wpss6','advanced','');} ?>
 	</div>
-			
+
 	<!--<div style="clear:both"></div>-->
-						
+
 	<div style="float:left; width:60%; " class="inner-sidebar1">
-		<?php if ( get_option('mlw_advert_shows') == 'true' ) {do_meta_boxes('mlw_quotes_wpss4','advanced','');} ?>	
+		<?php if ( get_option('mlw_advert_shows') == 'true' ) {do_meta_boxes('mlw_quotes_wpss4','advanced','');} ?>
 	</div>
 
 	</div>
@@ -119,7 +113,7 @@ function mlw_quotes_dashboard_services()
 		<p>Plugin Premium Support includes 1 year of priority support, priority feature requests, and access to WordPress training videos.</p>
 		<p>You can also purchase 1-on-1 training to go with your support!</p>
 		<p>For details, visit our <a href="http://mylocalwebstop.com/product/plugin-premium-support/" target="_blank" style="color:blue;">Plugin Premium Support</a> page.</p>
-		<hr /> 
+		<hr />
 		<h2>Plugin Installation Services</h2>
 		<p>We will install and configure any or all of our WordPress plugins on your existing WordPress site.</p>
 		<p>We also offer 1-on-1 training to go with your installation!</p>
@@ -161,7 +155,7 @@ function mlw_quotes_wpss_mrt_meta_box3()
 	<input type='hidden' name='action' value='update' />
 	<table>
 	<tr>
-	<td>If there is something you would like to suggest to add or even if you just want 
+	<td>If there is something you would like to suggest to add or even if you just want
 	to let me know if you like the plugin or not, feel free to use the email form below.</td>
 	</tr>
 	<tr>
