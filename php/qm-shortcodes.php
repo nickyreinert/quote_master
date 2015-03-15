@@ -56,7 +56,7 @@ class QM_Shortcodes
      * @since 6.4.0
      * @return string The HTML of the quote
      */
-    public function display_quotes()
+    public function display_quotes($atts)
     {
       extract(shortcode_atts(array(
     		'cate' => 'all',
@@ -64,15 +64,53 @@ class QM_Shortcodes
     	), $atts));
 
       $shortcode = '';
-      $my_query = new WP_Query( array('post_type' => 'quote', 'posts_per_page' => -1) );
+      $args = array(
+        'post_type' => 'quote',
+        'orderby' => 'rand',
+        'posts_per_page' => 1,
+      );
+      if ($cate != "all")
+      {
+        $cate = sanitize_text_field($cate);
+        $extra_args = array(
+          'tax_query' => array(
+        		array(
+        			'taxonomy' => 'quote_category',
+        			'field'    => 'slug',
+        			'terms'    => $cate,
+        		),
+        	),
+        );
+        $args = array_merge($args, $extra_args);
+      }
+      if ($all != 'no')
+      {
+        $extra_args = array(
+          'posts_per_page' => -1,
+        );
+        $args = array_merge($args, $extra_args);
+      }
+      $my_query = new WP_Query( $args );
     	if( $my_query->have_posts() )
     	{
     	  while( $my_query->have_posts() )
     		{
-          $shortcode_each = "<div class='qm_quote'>";
-    	    $my_query->the_post();
-					$shortcode_each .= '"'.esc_html(get_the_content()).'"<br />';
-          $shortcode_each .= "</div>";
+          $my_query->the_post();
+          $shortcode_each = '<div class="qm_quote">';
+
+            $quote_text = '"'.get_the_content().'"';
+            $quote_text = apply_filters('qm_quote_text', $quote_text);
+            $shortcode_each .= '<span class="qm_quote_text">'.esc_html($quote_text).'</span>';
+
+            $author = "~".get_post_meta(get_the_ID(),'quote_author',true);
+            $author = apply_filters('qm_author_text', $author);
+            $shortcode_each .= '<span class="qm_author_text">'.esc_html($author).'</span>';
+
+            $source = 'Source: '.get_post_meta(get_the_ID(),'source',true);
+            $source = apply_filters('qm_source_text', $source);
+            $shortcode_each .= '<span class="qm_source_text">'.esc_html($source).'</span>';
+
+          $shortcode_each .= '</div>';
           $shortcode .= apply_filters('qm_display_quote', $shortcode_each, get_the_ID());
     	  }
     	}

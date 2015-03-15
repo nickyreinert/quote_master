@@ -56,7 +56,11 @@ class MLW_Quote_Master
     public function load_dependencies()
     {
       include("php/qm-adverts.php");
+      include("php/qm-widgets.php");
       include("php/qm-shortcodes.php");
+      include("php/qm-update.php");
+      include("php/qm-help-page.php");
+      include("php/qm-post-meta-boxes.php");
     }
 
     /**
@@ -69,8 +73,8 @@ class MLW_Quote_Master
       */
     public function add_hooks()
     {
-        //add_action('admin_init', 'mlw_quotes_update');
-        //add_action('widgets_init', create_function('', 'return register_widget("Mlw_Quotes_Quote_Widget");'));
+        add_action('admin_init', 'qm_update');
+        add_action('widgets_init', create_function('', 'return register_widget("QM_Widget");'));
         add_action('admin_menu', array( $this, 'setup_admin_menu'));
         add_action('init', array( $this, 'register_quote_taxonomy'), 0);
         add_action('init', array( $this, 'register_quote_post_types'), 1);
@@ -148,7 +152,7 @@ class MLW_Quote_Master
   			'menu_icon' => 'dashicons-analytics',
   			'rewrite' => array('slug' => 'quote'),
   			'has_archive'        => false,
-  			'supports'           => array( 'editor', 'author' )
+  			'supports'           => array( 'editor' )
   		);
   		register_post_type( 'quote', $args );
   	}
