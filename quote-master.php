@@ -31,6 +31,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
   */
 class MLW_Quote_Master
 {
+
+    /**
+     * QM Version Number
+     *
+     * @var string
+     * @since 6.4.0
+     */
+    public $version = '6.4.0';
+
     /**
       * Main Construct Function
       *
@@ -61,6 +70,7 @@ class MLW_Quote_Master
       include("php/qm-update.php");
       include("php/qm-help-page.php");
       include("php/qm-post-meta-boxes.php");
+      include("php/qm-about-page.php");
     }
 
     /**
@@ -76,6 +86,7 @@ class MLW_Quote_Master
         add_action('admin_init', 'qm_update');
         add_action('widgets_init', create_function('', 'return register_widget("QM_Widget");'));
         add_action('admin_menu', array( $this, 'setup_admin_menu'));
+        add_action('admin_head', array( $this, 'admin_head'), 900);
         add_action('init', array( $this, 'register_quote_taxonomy'), 0);
         add_action('init', array( $this, 'register_quote_post_types'), 1);
         add_filter( 'post_row_actions', array($this, 'remove_views'), 10, 1 );
@@ -150,7 +161,7 @@ class MLW_Quote_Master
   			'publicly_queryable' => true,
   			'exclude_from_search' => true,
   			'label'  => 'Quotes',
-  			'menu_icon' => 'dashicons-analytics',
+  			'menu_icon' => 'dashicons-editor-quote',
   			'rewrite' => array('slug' => 'quote'),
   			'has_archive'        => false,
   			'supports'           => array( 'editor' )
@@ -187,7 +198,27 @@ class MLW_Quote_Master
       {
         add_submenu_page('edit.php?post_type=quote', __('Help', 'quote-master'), __('Help', 'quote-master'), 'moderate_comments', 'qm_help', 'mlw_generate_quiz_options');
       }
+      add_dashboard_page(
+				__( 'QM About', 'quote-master' ),
+				__( 'QM About', 'quote-master' ),
+				'moderate_comments',
+				'qm_about',
+				array('QM_About_Page', 'generate_page')
+			);
     }
+
+    /**
+  	 * Removes Unnecessary Admin Page
+  	 *
+  	 * Removes the update, quiz settings, and quiz results pages from the Quiz Menu
+  	 *
+  	 * @since 6.4.0
+  	 * @return void
+  	 */
+  	public function admin_head()
+  	{
+  		remove_submenu_page( 'index.php', 'qm_about' );
+  	}
 
     /**
       * Loads the plugin language files

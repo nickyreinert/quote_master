@@ -102,14 +102,14 @@ class QM_Shortcodes
 
             $quote_text = '"'.get_the_content().'"';
             $quote_text = apply_filters('qm_quote_text', $quote_text);
-            $shortcode_each .= '<span class="qm_quote_text">'.esc_html($quote_text).'</span>';
+            $shortcode_each .= "<span class='qm_quote_text'>$quote_text</span>";
 
             $author = get_post_meta(get_the_ID(),'quote_author',true);
             if ($author != '')
             {
               $author = "~".$author;
               $author = apply_filters('qm_author_text', $author);
-              $shortcode_each .= '<span class="qm_quote_author">'.esc_html($author).'</span>';
+              $shortcode_each .= "<span class='qm_quote_author'>$author</span>";
             }
 
             $source = get_post_meta(get_the_ID(),'source',true);
@@ -117,7 +117,7 @@ class QM_Shortcodes
             {
               $source = 'Source: '.$source;
               $source = apply_filters('qm_source_text', $source);
-              $shortcode_each .= '<span class="qm_quote_source">'.esc_html($source).'</span>';
+              $shortcode_each .= "<span class='qm_quote_source'>$source</span>";
             }
           $shortcode_each .= '</div>';
           $shortcode .= apply_filters('qm_display_quote', $shortcode_each, get_the_ID());
