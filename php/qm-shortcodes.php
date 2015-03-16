@@ -63,6 +63,8 @@ class QM_Shortcodes
     		'all' => 'no'
     	), $atts));
 
+      wp_enqueue_style( 'qm_quote_style', plugins_url( '../css/quote.css' , __FILE__ ) );
+
       $shortcode = '';
       $args = array(
         'post_type' => 'quote',
@@ -102,14 +104,21 @@ class QM_Shortcodes
             $quote_text = apply_filters('qm_quote_text', $quote_text);
             $shortcode_each .= '<span class="qm_quote_text">'.esc_html($quote_text).'</span>';
 
-            $author = "~".get_post_meta(get_the_ID(),'quote_author',true);
-            $author = apply_filters('qm_author_text', $author);
-            $shortcode_each .= '<span class="qm_author_text">'.esc_html($author).'</span>';
+            $author = get_post_meta(get_the_ID(),'quote_author',true);
+            if ($author != '')
+            {
+              $author = "~".$author;
+              $author = apply_filters('qm_author_text', $author);
+              $shortcode_each .= '<span class="qm_quote_author">'.esc_html($author).'</span>';
+            }
 
-            $source = 'Source: '.get_post_meta(get_the_ID(),'source',true);
-            $source = apply_filters('qm_source_text', $source);
-            $shortcode_each .= '<span class="qm_source_text">'.esc_html($source).'</span>';
-
+            $source = get_post_meta(get_the_ID(),'source',true);
+            if ($source != '')
+            {
+              $source = 'Source: '.$source;
+              $source = apply_filters('qm_source_text', $source);
+              $shortcode_each .= '<span class="qm_quote_source">'.esc_html($source).'</span>';
+            }
           $shortcode_each .= '</div>';
           $shortcode .= apply_filters('qm_display_quote', $shortcode_each, get_the_ID());
     	  }
