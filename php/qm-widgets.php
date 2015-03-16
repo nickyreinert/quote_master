@@ -97,14 +97,14 @@ class QM_Widget extends WP_Widget {
 
             $quote_text = '"'.get_the_content().'"';
             $quote_text = apply_filters('qm_quote_text', $quote_text);
-            $shortcode_each .= '<span class="qm_quote_widget_text">'.esc_html($quote_text).'</span>';
+            $shortcode_each .= "<span class='qm_quote_widget_text'>$quote_text</span>";
 
             $author = get_post_meta(get_the_ID(),'quote_author',true);
             if ($author != '')
             {
               $author = "~".$author;
               $author = apply_filters('qm_author_text', $author);
-              $shortcode_each .= '<span class="qm_quote_widget_author">'.esc_html($author).'</span>';
+              $shortcode_each .= "<span class='qm_quote_widget_author'>$author</span>";
             }
 
             $source = get_post_meta(get_the_ID(),'source',true);
@@ -112,7 +112,7 @@ class QM_Widget extends WP_Widget {
             {
               $source = 'Source: '.$source;
               $source = apply_filters('qm_source_text', $source);
-              $shortcode_each .= '<span class="qm_quote_widget_source">'.esc_html($source).'</span>';
+              $shortcode_each .= "<span class='qm_quote_widget_source'>$source</span>";
             }
 
           $shortcode_each .= '</div>';

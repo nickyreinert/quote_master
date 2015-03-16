@@ -102,7 +102,7 @@ function qm_post_quote_save( $post_id, $post, $update )
     add_post_meta($post_id, "source", sanitize_text_field($_POST["quote_source"]), true);
   }
   // unhook this function so it doesn't loop infinitely
-  remove_action( 'save_post', array($this, 'post_quote_save'), 10, 3 );
+  remove_action( 'save_post', 'qm_post_quote_save', 10, 3 );
 
   $my_post = array(
       'ID'           => $post_id,
@@ -111,6 +111,6 @@ function qm_post_quote_save( $post_id, $post, $update )
   wp_update_post( $my_post );
 
   // re-hook this function
-  add_action( 'save_post', array($this, 'post_quote_save'), 10, 3);
+  add_action( 'save_post', 'qm_post_quote_save', 10, 3);
 }
 ?>

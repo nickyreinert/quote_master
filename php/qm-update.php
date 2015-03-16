@@ -31,7 +31,7 @@ function qm_update()
 				}
 				else
 				{
-					error_log("All Clear!");
+					error_log("All Clear for creating taxonomy!");
 				}
 			}
 			$results = $wpdb->query( "DROP TABLE IF EXISTS ".$table_name );
@@ -55,7 +55,19 @@ function qm_update()
   			$quote_id = wp_insert_post( $args );
   			add_post_meta( $quote_id, 'quote_author', $quote->author, true );
 				add_post_meta( $quote_id, 'source', $quote->source, true );
-				wp_set_object_terms( $quote_id, $quote->category, 'quote' );
+				$term = get_term_by('name', $quote->category, 'quote_category');
+				if (!$term)
+				{
+					error_log("No term found");
+				}
+				$results = wp_set_object_terms( $quote_id, $term->slug, 'quote_category' );
+				if( is_wp_error( $results ) ) {
+					error_log($results->get_error_message());
+				}
+				else
+				{
+					error_log("All Clear for assigning taxonomy!");
+				}
 			}
 			$results = $wpdb->query( "DROP TABLE IF EXISTS ".$table_name );
 		}
