@@ -91,6 +91,10 @@ function qm_post_quote_save( $post_id, $post, $update )
     return;
   }
 
+  if (!isset($_POST["quote_author"])) {
+    return;
+  }
+
   if ($update)
   {
     update_post_meta($post_id, "quote_author", sanitize_text_field($_POST["quote_author"]));
