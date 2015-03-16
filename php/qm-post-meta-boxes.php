@@ -98,7 +98,17 @@ class QM_Post_Meta_Box
         add_post_meta($post_id, "quote_author", sanitize_text_field($_POST["quote_author"]), true);
         add_post_meta($post_id, "source", sanitize_text_field($_POST["quote_source"]), true);
       }
+      // unhook this function so it doesn't loop infinitely
+  		remove_action( 'save_post', array($this, 'post_quote_save'), 10, 3 );
 
+      $my_post = array(
+          'ID'           => $post_id,
+          'post_title'  => sanitize_text_field($post->post_content)
+      );
+      wp_update_post( $my_post );
+
+      // re-hook this function
+      add_action( 'save_post', array($this, 'post_quote_save'), 10, 3);
     }
 }
 $qm_post_meta_box = new QM_Post_Meta_Box();

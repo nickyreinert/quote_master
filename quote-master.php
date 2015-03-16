@@ -78,6 +78,7 @@ class MLW_Quote_Master
         add_action('admin_menu', array( $this, 'setup_admin_menu'));
         add_action('init', array( $this, 'register_quote_taxonomy'), 0);
         add_action('init', array( $this, 'register_quote_post_types'), 1);
+        add_filter( 'post_row_actions', array($this, 'remove_views'), 10, 1 );
     }
 
     /**
@@ -156,6 +157,21 @@ class MLW_Quote_Master
   		);
   		register_post_type( 'quote', $args );
   	}
+
+    /**
+     * Removes View Links From Quote Posts
+     *
+     * @since 6.4.0
+     * @return void
+     */
+    public function remove_views($actions)
+    {
+      if( get_post_type() === 'quote' )
+      {
+        unset( $actions['view'] );
+      }
+      return $actions;
+    }
 
     /**
       * Setup Admin Menu
