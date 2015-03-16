@@ -100,13 +100,7 @@ class QM_About_Page
       	<div id="changelog" style="display: none;">
           <h3><?php echo $version; ?> (March 16, 2015)</h3>
         	<ul>
-            <li>New Shortcode For Allowing Users To Enter Testimonial</li>
-            <li>Admin Page Redesign</li>
-            <li>New Update Page</li>
-            <li>Now Translation Ready</li>
-            <li>In Code: Now Uses Custom Post Types</li>
-            <li>In Code: Rewrote Entire Plugin</li>
-            <li>In Code: Added Various Hooks And Filters For Extending Plugin</li>
+            
           </ul>
       	</div>
     	</div>
