@@ -15,4 +15,14 @@ $results = $wpdb->query( "DROP TABLE IF EXISTS $table_name" );
 
 delete_option('mlw_quotes_version');
 delete_option('mlw_advert_shows');
+
+$my_query = new WP_Query( array('post_type' => 'quote') );
+if( $my_query->have_posts() )
+{
+	while( $my_query->have_posts() )
+	{
+		$my_query->the_post();
+		wp_delete_post( get_the_ID(), true);
+	}
+}
 ?>
