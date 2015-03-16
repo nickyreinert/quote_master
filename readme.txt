@@ -1,26 +1,28 @@
 === Quote Master ===
 Contributors: fpcorso
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RTGYAETX36ZQJ
+Donate link: http://mylocalwebstop.com/downloads/donation-service-payment/
 Tags: quote, text, widget, shortcode, post, sidebar, page, random
-Requires at least: 3.7.1
-Tested up to: 4.1
-Stable tag: 6.3.5
+Requires at least: 3.8.1
+Tested up to: 4.1.1
+Stable tag: 7.0.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin gives you the ability to add, edit, and delete quotes and display them randomly.
 
 == Description ==
-This plugin gives you the ability to add, edit, and delete quotes and their authors. You can show a random quote from your list by using the [mlw_quotes] shortcode on any page or post. You can also use the included Quote Master widget!
+This plugin gives you the ability to add, edit, and delete quotes and their authors. You can show a random quote from your list by using the [quotes] shortcode on any page or post. You can also use the included Quote Master widget!
 
 Features include:
 
 * Add, edit, delete quotes
 * Add, edit, delete categories
-* Show quotes only in selected category
+* Show random quote
+* Show random quote only from selected category
+* Show entire quotes list
+* Show all quotes in selected category
 * Include quote's author
 * Use shortcode on any post or page
 * Built-in widget
-* Includes 10 Quotes To Get You Started
 
 = Demoes! =
 You can check out the demo here: [Demo Quotes](http://mylocalwebstop.com/quote-master/)!
@@ -29,11 +31,6 @@ You can check out the demo here: [Demo Quotes](http://mylocalwebstop.com/quote-m
 Quote Master is on [GitHub](https://github.com/fpcorso/quote_master/)!
 
 == Installation ==
-
-We now offer an installation service to assist you in this process. We will install any or all of our plugins and spend up to 2 hours with you for consultaion and training. Visit our website for details.
-[My Local Webstop Plugin Installation](http://mylocalwebstop.com/product/plugin-installation/)
-
-**Or**
 
 * Navigate to Add New Plugin page within your WordPress
 * Search for Quote Master
@@ -47,21 +44,31 @@ We now offer an installation service to assist you in this process. We will inst
 
 == Frequently Asked Questions ==
 
+= What are the available shortcodes? =
+The help page in the plugin lists all the available shortcodes that you can use.
+
 = I need a lot of help setting up my quotes, what can you do to help? =
 We now offer a premium support plan that offers priority response, priority feature requests, and includes 1-on-1 training! For details, visit our premium support page: [My Local Webstop Premium Support](http://mylocalwebstop.com/product/plugin-premium-support/)
 
 = Do you offer any 1-on-1 training to assist me in using this plugin? =
-We now offer an installation service that includes 1-on-1 training as well as a monthly support plan that includes 1-on-1 training. For details, visit our services page: [My Local Webstop Services](http://mylocalwebstop.com/services/)
+We now offer 1-on-1 training for consulting and training. For details, visit our [Wordpress Store](http://mylocalwebstop.com/store/)
 
 = I have an idea, how do I contact you? =
 Feel free to use the widget on the help page within the plugin or from the contact page at mylocalwebstop.com.
 
 == Screenshots ==
 
-1. Quote Master Admin Page
-2. Quote Master Widget
+1. Admin Page
+2. Quote Widget
+3. Quote List
 
 == Changelog ==
+
+= 7.0.0 (March 17, 2014) =
+ * Re-wrote Plugin Using Custom Post Types
+ * Added New About Page
+ * Redesign Quote And Category Pages
+ * Updated Quote Design
 
 = 6.3.5 (December 31, 2014) =
  * Tested To WordPress Version 4.1
@@ -93,18 +100,18 @@ Feel free to use the widget on the help page within the plugin or from the conta
 
 = 6.1.1 (February 8, 2014) =
  * Added Category Page
- * Added Categories To Quotes 
- 
+ * Added Categories To Quotes
+
 = 6.0 (February 4, 2014) =
  * Rebuilt Plugin From Ground Up
  * Initial New Version
- 
+
 = Updates to original version =
 
 * 5.2.1 (October 17, 2010)
 	* Added Ability To Add Quotes
 	* Added Ability To Edit Quotes
-	
+
 * 4.3.1 (October 17, 2009)
 	* Added 10 Quotes
 	* Added Three Categories
@@ -221,8 +228,11 @@ Feel free to use the widget on the help page within the plugin or from the conta
 * 0.1.1
 	* Initial upload
 	* 19 Quotes
-	
+
 == Upgrade Notice ==
+
+= 7.0.0 =
+Upgrade for newly redesigned admin pages, quote widget, and quote shortcode
 
 = 6.3.5 =
 Minor design changes
