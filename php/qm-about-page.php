@@ -100,7 +100,10 @@ class QM_About_Page
       	<div id="changelog" style="display: none;">
           <h3><?php echo $version; ?> (March 16, 2015)</h3>
         	<ul>
-            
+            <li>Re-wrote Plugin Using Custom Post Types</li>
+            <li>Added New About Page</li>
+            <li>Redesign Quote And Category Pages</li>
+            <li>Updated Quote Design</li>
           </ul>
       	</div>
     	</div>

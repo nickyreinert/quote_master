@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 *
 * When loaded, it loads the included plugin files and add functions to hooks or filters.
 *
-* @since 0.2.0
+* @since 6.4.0
 */
 class QM_Help_Page
 {
@@ -17,7 +17,7 @@ class QM_Help_Page
   	  *
   	  * Call functions within class
   	  *
-  	  * @since 0.2.0
+  	  * @since 6.4.0
   	  * @uses QM_Help_Page::load_dependencies() Loads required filed
   	  * @uses QM_Help_Page::add_hooks() Adds actions to hooks and filters
   	  * @return void
@@ -31,7 +31,7 @@ class QM_Help_Page
     /**
   	  * Load File Dependencies
   	  *
-  	  * @since 0.2.0
+  	  * @since 6.4.0
   	  * @return void
   	  */
     public function load_dependencies()
@@ -44,7 +44,7 @@ class QM_Help_Page
   	  *
   	  * Adds functions to relavent hooks and filters
   	  *
-  	  * @since 0.2.0
+  	  * @since 6.4.0
   	  * @return void
   	  */
     public function add_hooks()
@@ -55,7 +55,7 @@ class QM_Help_Page
 		/**
 		 * Generates Help Page
 		 *
-		 * @since 0.2.0
+		 * @since 6.4.0
 		 */
 		public static function generate_page()
 		{
@@ -110,7 +110,7 @@ class QM_Help_Page
 		/**
      * Generate Use Meta Box
      *
-     * @since 0.2.0
+     * @since 6.4.0
      */
     public static function use_box()
     {
@@ -136,7 +136,7 @@ class QM_Help_Page
     /**
      * Generate Help Meta Box
      *
-     * @since 0.2.0
+     * @since 6.4.0
      */
     public static function help_box()
     {
@@ -154,7 +154,7 @@ class QM_Help_Page
     /**
      * Generate Services Meta Box
      *
-     * @since 0.2.0
+     * @since 6.4.0
      */
     public static function services_box()
     {
@@ -184,7 +184,7 @@ class QM_Help_Page
     /**
      * Generate Support Meta Box
      *
-     * @since 0.2.0
+     * @since 6.4.0
      */
     public static function email_box()
     {
@@ -261,7 +261,7 @@ class QM_Help_Page
     /**
      * Generate Donation Meta Box
      *
-     * @since 0.2.0
+     * @since 6.4.0
      */
     public static function donation_box()
     {
@@ -277,7 +277,7 @@ class QM_Help_Page
     /**
      * Generate News Meta Box
      *
-     * @since 0.2.0
+     * @since 6.4.0
      */
     public static function news_box()
     {
