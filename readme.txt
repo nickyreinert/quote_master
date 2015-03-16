@@ -1,10 +1,10 @@
 === Quote Master ===
 Contributors: fpcorso
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RTGYAETX36ZQJ
+Donate link: http://mylocalwebstop.com/downloads/donation-service-payment/
 Tags: quote, text, widget, shortcode, post, sidebar, page, random
 Requires at least: 3.8.1
 Tested up to: 4.1.1
-Stable tag: 6.4.0
+Stable tag: 7.0.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin gives you the ability to add, edit, and delete quotes and display them randomly.
@@ -64,7 +64,7 @@ Feel free to use the widget on the help page within the plugin or from the conta
 
 == Changelog ==
 
-= 6.4.0 (March 17, 2014) =
+= 7.0.0 (March 17, 2014) =
  * Re-wrote Plugin Using Custom Post Types
  * Added New About Page
  * Redesign Quote And Category Pages
@@ -231,7 +231,7 @@ Feel free to use the widget on the help page within the plugin or from the conta
 
 == Upgrade Notice ==
 
-= 6.4.0 =
+= 7.0.0 =
 Upgrade for newly redesigned admin pages, quote widget, and quote shortcode
 
 = 6.3.5 =

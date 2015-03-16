@@ -1,7 +1,11 @@
 <?php
-/*
-This is the update function for the plugin. When the plugin gets updated, the database changes are done here. This function is placed in the init of wordpress.
-*/
+if ( ! defined( 'ABSPATH' ) ) exit;
+/**
+ * Checks To See If Update Is Required. If So, Updates The Plugin's Backend
+ *
+ * @since 7.0.0
+ * @return void
+ */
 function qm_update()
 {
 	global $quote_master;

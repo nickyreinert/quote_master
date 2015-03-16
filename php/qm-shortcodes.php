@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
   * Class to create the various shortcodes
   *
-  * @since 6.4.0
+  * @since 7.0.0
   */
 class QM_Shortcodes
 {
@@ -12,7 +12,7 @@ class QM_Shortcodes
       *
       * Call functions within class
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @uses QM_Shortcodes::load_dependencies() Loads required filed
       * @uses QM_Shortcodes::add_hooks() Adds actions to hooks and filters
       * @return void
@@ -26,7 +26,7 @@ class QM_Shortcodes
     /**
       * Load File Dependencies
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function load_dependencies()
@@ -39,7 +39,7 @@ class QM_Shortcodes
       *
       * Adds functions to relavent hooks and filters
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function add_hooks()
@@ -53,7 +53,7 @@ class QM_Shortcodes
     /**
      * Displays Quotes
      *
-     * @since 6.4.0
+     * @since 7.0.0
      * @return string The HTML of the quote
      */
     public function display_quotes($atts)

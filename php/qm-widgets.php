@@ -1,8 +1,10 @@
 <?php
-/*
-This is the file that contains all the widgets for the plugin
-*/
-
+if ( ! defined( 'ABSPATH' ) ) exit;
+/**
+ * Class to generate the quote widget
+ *
+ * @since 7.0.0
+ */
 class QM_Widget extends WP_Widget {
 
    	// constructor

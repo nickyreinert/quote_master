@@ -1,8 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 /**
-  * Class Description
+  * Generates The Meta Box For Editing The Quote
   *
-  * @since 6.4.0
+  * @since 7.0.0
   */
 class QM_Post_Meta_Box
 {
@@ -11,7 +12,7 @@ class QM_Post_Meta_Box
       *
       * Call functions within class
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @uses CLASSNAME::load_dependencies() Loads required filed
       * @uses CLASSNAME::add_hooks() Adds actions to hooks and filters
       * @return void
@@ -25,7 +26,7 @@ class QM_Post_Meta_Box
     /**
       * Load File Dependencies
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function load_dependencies()
@@ -38,7 +39,7 @@ class QM_Post_Meta_Box
       *
       * Adds functions to relavent hooks and filters
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function add_hooks()

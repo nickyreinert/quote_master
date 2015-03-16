@@ -1,8 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 /**
   * Generates the about page
   *
-  * @since 6.4.0
+  * @since 7.0.0
   */
 class QM_About_Page
 {
@@ -11,7 +12,7 @@ class QM_About_Page
       *
       * Call functions within class
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @uses QM_About_Page::load_dependencies() Loads required filed
       * @uses QM_About_Page::add_hooks() Adds actions to hooks and filters
       * @return void
@@ -25,7 +26,7 @@ class QM_About_Page
     /**
       * Load File Dependencies
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function load_dependencies()
@@ -38,7 +39,7 @@ class QM_About_Page
       *
       * Adds functions to relavent hooks and filters
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function add_hooks()
@@ -49,7 +50,7 @@ class QM_About_Page
     /**
      * Generates the about page
      *
-     * @since 6.4.0
+     * @since 7.0.0
      * @return void
      */
     public static function generate_page()

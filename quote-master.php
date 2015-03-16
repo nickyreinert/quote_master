@@ -5,7 +5,7 @@
  * Description: Use this plugin to add quotes to your website.
  * Author: Frank Corso
  * Author URI: http://mylocalwebstop.com
- * Version: 6.4.0
+ * Version: 7.0.0
  * Text Domain: quote-master
  * Domain Path: /languages
  *
@@ -16,7 +16,7 @@
  * You understand that you install, operate, and uninstall the plugin at your own discretion and risk.
  *
  * @author Frank Corso
- * @version 6.4.0
+ * @version 7.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
   *
   * When loaded, it loads the included plugin files and add functions to hooks or filters. The class also handles the admin menu
   *
-  * @since 6.4.0
+  * @since 7.0.0
   */
 class MLW_Quote_Master
 {
@@ -36,16 +36,16 @@ class MLW_Quote_Master
      * QM Version Number
      *
      * @var string
-     * @since 6.4.0
+     * @since 7.0.0
      */
-    public $version = '6.4.0';
+    public $version = '7.0.0';
 
     /**
       * Main Construct Function
       *
       * Call functions within class
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @uses MLW_Quote_Master::load_dependencies() Loads required filed
       * @uses MLW_Quote_Master::add_hooks() Adds actions to hooks and filters
       * @return void
@@ -59,7 +59,7 @@ class MLW_Quote_Master
     /**
       * Load File Dependencies
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function load_dependencies()
@@ -78,7 +78,7 @@ class MLW_Quote_Master
       *
       * Adds functions to relavent hooks and filters
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function add_hooks()
@@ -95,7 +95,7 @@ class MLW_Quote_Master
     /**
      * Creates Quote Categories For Custom Post Type
      *
-     * @since 6.4.0
+     * @since 7.0.0
      * @return void
      */
     public function register_quote_taxonomy()
@@ -130,7 +130,7 @@ class MLW_Quote_Master
     /**
   	 * Creates Custom Quote Post Type
   	 *
-  	 * @since 6.4.0
+  	 * @since 7.0.0
   	 * @return void
   	 */
   	public function register_quote_post_types()
@@ -172,7 +172,7 @@ class MLW_Quote_Master
     /**
      * Removes View Links From Quote Posts
      *
-     * @since 6.4.0
+     * @since 7.0.0
      * @return void
      */
     public function remove_views($actions)
@@ -189,7 +189,7 @@ class MLW_Quote_Master
       *
       * Creates the admin menu and pages for the plugin and attaches functions to them
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function setup_admin_menu()
@@ -212,7 +212,7 @@ class MLW_Quote_Master
   	 *
   	 * Removes the update, quiz settings, and quiz results pages from the Quiz Menu
   	 *
-  	 * @since 6.4.0
+  	 * @since 7.0.0
   	 * @return void
   	 */
   	public function admin_head()
@@ -223,7 +223,7 @@ class MLW_Quote_Master
     /**
       * Loads the plugin language files
       *
-      * @since 6.4.0
+      * @since 7.0.0
       * @return void
       */
     public function setup_translations()

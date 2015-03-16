@@ -3,9 +3,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Quote Master v6.4.0\n"
+"Project-Id-Version: Quote Master v7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-16 16:06-0500\n"
+"POT-Creation-Date: 2015-03-16 17:44-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frank Corso <frank@mylocalwebstop.com>\n"
 "Language-Team: My Local Webstop <support@mylocalwebstop.com>\n"
@@ -72,15 +72,15 @@ msgstr ""
 msgid "QM About"
 msgstr ""
 
-#: php/qm-widgets.php:10
+#: php/qm-widgets.php:12
 msgid "Quote Master Widget"
 msgstr ""
 
-#: php/qm-widgets.php:27
+#: php/qm-widgets.php:29
 msgid "Widget Title"
 msgstr ""
 
-#: php/qm-widgets.php:31
+#: php/qm-widgets.php:33
 msgid "Category"
 msgstr ""
 
@@ -180,22 +180,23 @@ msgstr ""
 msgid "Thank you to those who have contributed so far!"
 msgstr ""
 
-#: php/qm-post-meta-boxes.php:55
+#: php/qm-post-meta-boxes.php:56
 msgid "Author And Source"
 msgstr ""
 
-#: php/qm-about-page.php:63
+#: php/qm-about-page.php:64
 msgid "Welcome To Quote Master"
 msgstr ""
 
-#: php/qm-about-page.php:64
+#: php/qm-about-page.php:65
 msgid "Thank you for updating!"
 msgstr ""
 
-#: php/qm-about-page.php:67
+#: php/qm-about-page.php:68
 msgid "What's New!"
 msgstr ""
 
-#: php/qm-about-page.php:69
+#: php/qm-about-page.php:70
 msgid "Changelog"
 msgstr ""
+
