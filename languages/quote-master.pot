@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quote Master v7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-23 11:14-0500\n"
+"POT-Creation-Date: 2015-04-23 11:23-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frank Corso <frank@mylocalwebstop.com>\n"
 "Language-Team: My Local Webstop <support@mylocalwebstop.com>\n"
@@ -144,43 +144,43 @@ msgstr ""
 msgid "Need help with the plugin? Try any of the following:"
 msgstr ""
 
-#: php/qm-help-page.php:146
-msgid "Fill out the form in the Support widget to send us an email"
+#: php/qm-help-page.php:147
+msgid "fill out the form in the Support widget to send us an email"
 msgstr ""
 
-#: php/qm-help-page.php:225
+#: php/qm-help-page.php:224
 msgid "If you have any suggestions or issues with the plugin, feel free to use the form below!"
 msgstr ""
 
-#: php/qm-help-page.php:231
+#: php/qm-help-page.php:230
 msgid "Name (Required):"
 msgstr ""
 
-#: php/qm-help-page.php:237
+#: php/qm-help-page.php:236
 msgid "Email (Required):"
 msgstr ""
 
-#: php/qm-help-page.php:243
+#: php/qm-help-page.php:242
 msgid "Message (Required):"
 msgstr ""
 
-#: php/qm-help-page.php:249
+#: php/qm-help-page.php:248
 msgid "Send Email"
 msgstr ""
 
-#: php/qm-help-page.php:256
+#: php/qm-help-page.php:255
 msgid "Disclaimer: In order to better assist you, this form will also send some information about your WordPress installation along with your message."
 msgstr ""
 
-#: php/qm-help-page.php:269
+#: php/qm-help-page.php:268
 msgid "Quote Master is and always will be a free plugin. I have spent a lot of time and effort developing and maintaining this plugin. If it has been beneficial to your site, please consider supporting this plugin by making a donation."
 msgstr ""
 
-#: php/qm-help-page.php:271
+#: php/qm-help-page.php:270
 msgid "Donate"
 msgstr ""
 
-#: php/qm-help-page.php:273
+#: php/qm-help-page.php:272
 msgid "Thank you to those who have contributed so far!"
 msgstr ""
 
