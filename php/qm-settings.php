@@ -66,7 +66,7 @@ class QMGlobalSettingsPage
 	/**
 	 * Generates Section Text
 	 *
-	 * Generates the section text. If page has been saved, flush rewrite rules for updated post type slug
+	 * Generates the section text.
 	 *
 	 * @since 4.1.0
 	 * @return void
@@ -81,7 +81,7 @@ class QMGlobalSettingsPage
 	}
 
 	/**
-	 * Generates Setting Field For Results Details Template
+	 * Generates Setting Field For Custom Style Template
 	 *
 	 * @since 4.1.0
 	 * @return void
@@ -107,7 +107,7 @@ class QMGlobalSettingsPage
 	}
 
   /**
-	 * Generates Setting Field For Usage Tracker Authorization
+	 * Generates Setting Field For Enable Tweet
 	 *
 	 * @since 4.1.0
 	 * @return void
@@ -129,7 +129,7 @@ class QMGlobalSettingsPage
 	}
 
 	/**
-	 * Generates Setting Field For Usage Tracker Authorization
+	 * Generates Setting Field For Style
 	 *
 	 * @since 4.1.0
 	 * @return void
