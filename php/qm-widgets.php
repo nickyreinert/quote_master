@@ -96,8 +96,9 @@ class QM_Widget extends WP_Widget {
      		{
           $my_query->the_post();
           $shortcode_each = '<div class="qm_quote_widget">';
-
+            $tweet = '';
             $quote_text = apply_filters('qm_quote_text', get_the_content());
+            $tweet = '"' . $quote_text . '" ';
             $shortcode_each .= "<span class='qm_quote_widget_text'>$quote_text</span>";
 
             $author = get_post_meta(get_the_ID(),'quote_author',true);
@@ -105,6 +106,7 @@ class QM_Widget extends WP_Widget {
             {
               $author = "~".$author;
               $author = apply_filters('qm_author_text', $author);
+              $tweet .= $author . ' ';
               $shortcode_each .= "<span class='qm_quote_widget_author'>$author</span>";
             }
 
@@ -115,6 +117,9 @@ class QM_Widget extends WP_Widget {
               $source = apply_filters('qm_source_text', $source);
               $shortcode_each .= "<span class='qm_quote_widget_source'>$source</span>";
             }
+            $tweet .= "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'];
+            $tweet = apply_filters('qm_tweet_text', $tweet);
+            $shortcode_each .= "<a href='https://twitter.com/intent/tweet?text=".esc_html($tweet)."' class='qm_quote_tweet'>Tweet</a>";
 
           $shortcode_each .= '</div>';
           $shortcode .= apply_filters('qm_display_quote', $shortcode_each, get_the_ID());
