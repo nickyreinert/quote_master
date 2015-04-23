@@ -3,8 +3,9 @@ Contributors: fpcorso
 Donate link: http://mylocalwebstop.com/downloads/donation-service-payment/
 Tags: quote, text, widget, shortcode, post, sidebar, page, random
 Requires at least: 3.8.1
-Tested up to: 4.1.1
-Stable tag: 7.0.0
+Tested up to: 4.2
+Stable tag: 7.1.0
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin gives you the ability to add, edit, and delete quotes and display them randomly.
@@ -23,6 +24,8 @@ Features include:
 * Include quote's author
 * Use shortcode on any post or page
 * Built-in widget
+* Add Tweet link to quote to allow visitors to tweet the quote
+* Edit the style for the quotes
 
 = Demoes! =
 You can check out the demo here: [Demo Quotes](http://mylocalwebstop.com/quote-master/)!
@@ -48,10 +51,7 @@ Quote Master is on [GitHub](https://github.com/fpcorso/quote_master/)!
 The help page in the plugin lists all the available shortcodes that you can use.
 
 = I need a lot of help setting up my quotes, what can you do to help? =
-We now offer a premium support plan that offers priority response, priority feature requests, and includes 1-on-1 training! For details, visit our premium support page: [My Local Webstop Premium Support](http://mylocalwebstop.com/product/plugin-premium-support/)
-
-= Do you offer any 1-on-1 training to assist me in using this plugin? =
-We now offer 1-on-1 training for consulting and training. For details, visit our [Wordpress Store](http://mylocalwebstop.com/store/)
+We now offer a premium support plan that offers priority response, technical support, and priority feature requests! For details, visit our support page: [Quiz Master Next Support](http://quizmasternext.com/downloads/premium-support/)
 
 = I have an idea, how do I contact you? =
 Feel free to use the widget on the help page within the plugin or from the contact page at mylocalwebstop.com.
@@ -64,7 +64,13 @@ Feel free to use the widget on the help page within the plugin or from the conta
 
 == Changelog ==
 
-= 7.0.0 (March 17, 2014) =
+= 7.1.0 (April 24, 2015) =
+ * Added Ability To Allow Users To Tweet Quote ([GitHub Issue #12](https://github.com/fpcorso/quote_master/issues/12))
+ * Added New Settings Page
+ * Added Ability To Edit Style ([GitHub Issue #11](https://github.com/fpcorso/quote_master/issues/11))
+ * Bug Fix: Fixed Quotations On Own Line Bug ([GitHub Issue #13](https://github.com/fpcorso/quote_master/issues/13))
+
+= 7.0.0 (March 17, 2015) =
  * Re-wrote Plugin Using Custom Post Types
  * Added New About Page
  * Redesign Quote And Category Pages
@@ -230,6 +236,9 @@ Feel free to use the widget on the help page within the plugin or from the conta
 	* 19 Quotes
 
 == Upgrade Notice ==
+
+= 7.1.0 =
+Upgrade for ability to tweet quotes and edit quote style
 
 = 7.0.0 =
 Upgrade for newly redesigned admin pages, quote widget, and quote shortcode

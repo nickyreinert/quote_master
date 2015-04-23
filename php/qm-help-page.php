@@ -143,10 +143,9 @@ class QM_Help_Page
       ?>
     	<p><?php _e('Need help with the plugin? Try any of the following:', 'quote-master'); ?></p>
     	<ul>
-    		<li><?php _e('Fill out the form in the Support widget to send us an email','quote-master'); ?></li>
-    		<li>Fill out the form on our <a target="_blank" href="http://mylocalwebstop.com/contact-us/">Contact Us Page</a></li>
-				<li>For bugs, issues, and requests, please use our <a target="_blank" href="https://github.com/fpcorso/quote_master/issues">Github Issue Tracker</a></li>
-    		<li>Create a topic in the <a target="_blank" href="https://wordpress.org/plugins/quote-master/">WordPress Support Forums</a></li>
+        <li>For bugs, issues, and requests, please use our <a target="_blank" href="https://github.com/fpcorso/quote_master/issues">Github Issue Tracker</a></li>
+        <li>For support, <?php _e('fill out the form in the Support widget to send us an email','quote-master'); ?>, fill out the form on our <a target="_blank" href="http://mylocalwebstop.com/contact-us/">Contact Us Page</a>,
+          or create a topic in the <a target="_blank" href="https://wordpress.org/plugins/quote-master/">WordPress Support Forums</a>.</li>
     	</ul>
     	<?php
     }
@@ -282,7 +281,7 @@ class QM_Help_Page
     public static function news_box()
     {
       $qmn_rss = array();
-    	$qmn_feed = fetch_feed('http://mylocalwebstop.com/category/our-blog/feed');
+    	$qmn_feed = fetch_feed('http://mylocalwebstop.com/feed');
     	if (!is_wp_error($qmn_feed)) {
     		$qmn_feed_items = $qmn_feed->get_items(0, 5);
     		foreach ($qmn_feed_items as $feed_item) {

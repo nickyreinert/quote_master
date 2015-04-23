@@ -5,7 +5,7 @@
  * Description: Use this plugin to add quotes to your website.
  * Author: Frank Corso
  * Author URI: http://mylocalwebstop.com
- * Version: 7.0.0
+ * Version: 7.1.0
  * Text Domain: quote-master
  * Domain Path: /languages
  *
@@ -16,7 +16,7 @@
  * You understand that you install, operate, and uninstall the plugin at your own discretion and risk.
  *
  * @author Frank Corso
- * @version 7.0.0
+ * @version 7.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -38,7 +38,7 @@ class MLW_Quote_Master
      * @var string
      * @since 7.0.0
      */
-    public $version = '7.0.0';
+    public $version = '7.1.0';
 
     /**
       * Main Construct Function
@@ -71,6 +71,7 @@ class MLW_Quote_Master
       include("php/qm-help-page.php");
       include("php/qm-post-meta-boxes.php");
       include("php/qm-about-page.php");
+      include("php/qm-settings.php");
     }
 
     /**
@@ -196,6 +197,7 @@ class MLW_Quote_Master
     {
       if (function_exists('add_submenu_page'))
       {
+        add_submenu_page('edit.php?post_type=quote', __('Settings', 'quote-master'), __('Settings', 'quote-master'), 'moderate_comments', 'qm_settings', array('QMGlobalSettingsPage', 'display_page'));
         add_submenu_page('edit.php?post_type=quote', __('Help', 'quote-master'), __('Help', 'quote-master'), 'moderate_comments', 'qm_help', array('QM_Help_Page', 'generate_page'));
       }
       add_dashboard_page(

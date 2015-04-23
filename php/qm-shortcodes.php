@@ -63,7 +63,21 @@ class QM_Shortcodes
     		'all' => 'no'
     	), $atts));
 
-      wp_enqueue_style( 'qm_quote_style', plugins_url( '../css/quote.css' , __FILE__ ) );
+      $settings = (array) get_option( 'qm-settings' );
+      if ( isset( $settings['chosen_style'] ) ) {
+        switch ($settings['chosen_style']) {
+          case 'default':
+            wp_enqueue_style( 'qm_quote_style', plugins_url( '../css/quote.css' , __FILE__ ) );
+            break;
+
+          default:
+            echo "<style>".$settings['custom_style']."</style>";
+            break;
+        }
+      } else {
+        wp_enqueue_style( 'qm_quote_style', plugins_url( '../css/quote.css' , __FILE__ ) );
+      }
+
 
       $shortcode = '';
       $args = array(
@@ -99,9 +113,10 @@ class QM_Shortcodes
     		{
           $my_query->the_post();
           $shortcode_each = '<div class="qm_quote">';
+            $tweet = '';
 
-            $quote_text = '"'.get_the_content().'"';
-            $quote_text = apply_filters('qm_quote_text', $quote_text);
+            $quote_text = apply_filters('qm_quote_text', get_the_content());
+            $tweet = '"' . $quote_text . '" ';
             $shortcode_each .= "<span class='qm_quote_text'>$quote_text</span>";
 
             $author = get_post_meta(get_the_ID(),'quote_author',true);
@@ -109,6 +124,7 @@ class QM_Shortcodes
             {
               $author = "~".$author;
               $author = apply_filters('qm_author_text', $author);
+              $tweet .= $author . ' ';
               $shortcode_each .= "<span class='qm_quote_author'>$author</span>";
             }
 
@@ -119,6 +135,13 @@ class QM_Shortcodes
               $source = apply_filters('qm_source_text', $source);
               $shortcode_each .= "<span class='qm_quote_source'>$source</span>";
             }
+
+            if ( isset( $settings['enable_tweet'] ) && $settings['enable_tweet'] == '1' ) {
+              $tweet .= "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'];
+              $tweet = apply_filters('qm_tweet_text', $tweet);
+              $shortcode_each .= "<a href='https://twitter.com/intent/tweet?text=".esc_html($tweet)."' class='qm_quote_tweet'>Tweet</a>";
+            }
+
           $shortcode_each .= '</div>';
           $shortcode .= apply_filters('qm_display_quote', $shortcode_each, get_the_ID());
     	  }

@@ -11,6 +11,14 @@
 	margin-bottom: 20px;
   box-shadow: 2px 2px 5px;
 
+  &_text {
+
+  }
+
+  &_text:before, &_text:after {
+    content: '"';
+  }
+
   &_author {
     font-size: 18px;
   	text-align: right;
@@ -27,6 +35,18 @@
   	font-style: italic;
   	display: block;
   	color: gray;
+  }
+
+  &_tweet {
+    font-size: 18px;
+  	text-align: right;
+  	padding: 4px;
+  	font-style: italic;
+  	display: block;
+  }
+
+  p {
+    display: inline !important;
   }
 }
 
@@ -39,6 +59,14 @@
   box-shadow: 2px 2px 5px;
   padding: 10px;
 
+  &_text {
+
+  }
+
+  &_text:before, &_text:after {
+    content: '"';
+  }
+
   &_author {
   	text-align: right;
   	font-style: italic;
@@ -51,5 +79,17 @@
   	font-style: italic;
   	display: block;
   	color: gray;
+  }
+
+  &_tweet {
+    font-size: 18px;
+  	text-align: right;
+  	padding: 4px;
+  	font-style: italic;
+  	display: block;
+  }
+  
+  p {
+    display: inline !important;
   }
 }
