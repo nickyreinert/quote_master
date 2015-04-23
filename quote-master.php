@@ -71,6 +71,7 @@ class MLW_Quote_Master
       include("php/qm-help-page.php");
       include("php/qm-post-meta-boxes.php");
       include("php/qm-about-page.php");
+      include("php/qm-settings.php");
     }
 
     /**
@@ -196,6 +197,7 @@ class MLW_Quote_Master
     {
       if (function_exists('add_submenu_page'))
       {
+        add_submenu_page('edit.php?post_type=quote', __('Settings', 'quote-master'), __('Settings', 'quote-master'), 'moderate_comments', 'qm_settings', array('QMGlobalSettingsPage', 'display_page'));
         add_submenu_page('edit.php?post_type=quote', __('Help', 'quote-master'), __('Help', 'quote-master'), 'moderate_comments', 'qm_help', array('QM_Help_Page', 'generate_page'));
       }
       add_dashboard_page(
