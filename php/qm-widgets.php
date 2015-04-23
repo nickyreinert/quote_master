@@ -97,8 +97,7 @@ class QM_Widget extends WP_Widget {
           $my_query->the_post();
           $shortcode_each = '<div class="qm_quote_widget">';
 
-            $quote_text = '"'.get_the_content().'"';
-            $quote_text = apply_filters('qm_quote_text', $quote_text);
+            $quote_text = apply_filters('qm_quote_text', get_the_content());
             $shortcode_each .= "<span class='qm_quote_widget_text'>$quote_text</span>";
 
             $author = get_post_meta(get_the_ID(),'quote_author',true);
