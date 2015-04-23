@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quote Master v7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-16 17:44-0500\n"
+"POT-Creation-Date: 2015-04-23 11:14-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frank Corso <frank@mylocalwebstop.com>\n"
 "Language-Team: My Local Webstop <support@mylocalwebstop.com>\n"
@@ -22,53 +22,57 @@ msgstr ""
 "X-Poedit-Country: UNITED STATES\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: quote-master.php:105
+#: quote-master.php:106
 msgid "Quote Categories"
 msgstr ""
 
-#: quote-master.php:106
-#: quote-master.php:115
+#: quote-master.php:107
+#: quote-master.php:116
 msgid "Quote Category"
 msgstr ""
 
-#: quote-master.php:107
+#: quote-master.php:108
 msgid "Search Quote Categories"
 msgstr ""
 
-#: quote-master.php:108
+#: quote-master.php:109
 msgid "All Quote Categories"
 msgstr ""
 
-#: quote-master.php:109
+#: quote-master.php:110
 msgid "Parent Quote Category"
 msgstr ""
 
-#: quote-master.php:110
+#: quote-master.php:111
 msgid "Parent Quote Category:"
 msgstr ""
 
-#: quote-master.php:111
+#: quote-master.php:112
 msgid "Edit Quote Category"
 msgstr ""
 
-#: quote-master.php:112
+#: quote-master.php:113
 msgid "Update Quote Category"
 msgstr ""
 
-#: quote-master.php:113
+#: quote-master.php:114
 msgid "Add New Quote Category"
 msgstr ""
 
-#: quote-master.php:114
+#: quote-master.php:115
 msgid "New Quote Category Name"
 msgstr ""
 
-#: quote-master.php:199
+#: quote-master.php:200
+msgid "Settings"
+msgstr ""
+
+#: quote-master.php:201
 msgid "Help"
 msgstr ""
 
-#: quote-master.php:202
-#: quote-master.php:203
+#: quote-master.php:204
+#: quote-master.php:205
 msgid "QM About"
 msgstr ""
 
