@@ -70,14 +70,11 @@ class QM_About_Page
       			<?php _e('Changelog', 'quote-master'); ?></a>
       	</h2>
       	<div id="what_new">
-          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">New Style For The Quotes</h2>
-        	<p style="text-align: center;">All the quotes now have a special style to enhance their appearance.</p>
+          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">Ability To Edit Style</h2>
+        	<p style="text-align: center;">Now, you can use your own custom style using the new Settings page.</p>
         	<br />
-          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">Admin Page Redesign</h2>
-        	<p style="text-align: center;">I completely redesigned the admin page. You can now find your quotes in the new Quote menu.</p>
-        	<br />
-          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">New Update Page</h2>
-        	<p style="text-align: center;">This version brings a new update page so you know what new features and capabilities are in the new version.</p>
+          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">Ability To Tweet Quotes</h2>
+        	<p style="text-align: center;">You can now allow users to tweet quotes. You can turn on this option from the new Settings page.</p>
         	<br />
           <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">This Plugin Is Now Translation Ready!</h2>
         	<p style="text-align: center;">For those who wish to assist in translating, you can find the POT in the languages folder. If you do not know what that is, feel free to contact me and I will assist you with it.</p>
@@ -85,26 +82,17 @@ class QM_About_Page
           <hr />
         	<h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">For Developers:</h2>
         	<br />
-          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">Rewrote Entire Plugin</h2>
-        	<p style="text-align: center;">I completely rewrote the entire new plugin with better structure and OOP to help with future extendability.</p>
-        	<br />
-          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">Now With Custom Post Types</h2>
-        	<p style="text-align: center;">All quotes are posts with the custom post type of quote.</p>
-        	<br />
-          <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">New Hooks And Filters</h2>
-        	<p style="text-align: center;">I added several new hooks and filters to assist with extending the plugin.</p>
-        	<br />
           <h2 style="margin: 1.1em 0 .2em;font-size: 2.4em;font-weight: 300;line-height: 1.3;text-align: center;">We Are On GitHub Now</h2>
         	<p style="text-align: center;">Quote Master is now on GitHub! I would love for you to add suggestions/feedback by creating issues. Feel free to fork and create pull requests too. Be sure to <a href="https://github.com/fpcorso/quote_master">check out the repository</a>.</p>
         	<br />
       	</div>
       	<div id="changelog" style="display: none;">
-          <h3><?php echo $version; ?> (March 16, 2015)</h3>
+          <h3><?php echo $version; ?> (April 24, 2015)</h3>
         	<ul>
-            <li>Re-wrote Plugin Using Custom Post Types</li>
-            <li>Added New About Page</li>
-            <li>Redesign Quote And Category Pages</li>
-            <li>Updated Quote Design</li>
+            <li>Added Ability To Allow Users To Tweet Quote <a href='https://github.com/fpcorso/quote_master/issues/12'>GitHub Issue #12</a></li>
+            <li>Added New Settings Page</li>
+            <li>Added Ability To Edit Style <a href='https://github.com/fpcorso/quote_master/issues/11'>GitHub Issue #11</a></li>
+            <li>Bug Fix: Fixed Quotations On Own Line Bug <a href='https://github.com/fpcorso/quote_master/issues/13'>GitHub Issue #13</a></li>
           </ul>
       	</div>
     	</div>
