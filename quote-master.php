@@ -3,9 +3,9 @@
  * Plugin Name: Quote Master
  * Plugin URI: http://mylocalwebstop.com
  * Description: Use this plugin to add quotes to your website.
- * Author: Frank Corso
+ * Author: Frank Corso, Andrew Gunn
  * Author URI: http://mylocalwebstop.com
- * Version: 7.1.0
+ * Version: 7.1.1
  * Text Domain: quote-master
  * Domain Path: /languages
  *
