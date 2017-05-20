@@ -57,11 +57,17 @@ class QMGlobalSettingsPage
 	public function init()
 	{
 		register_setting( 'qm-settings-group', 'qm-settings' );
-    add_settings_section( 'qm-global-section', 'Main Settings', array($this, 'global_section'), 'qm_global_settings' );
-    add_settings_field( 'enable-tweet', 'Allow Users To Tweet Quote', array($this, 'enable_tweet_field'), 'qm_global_settings', 'qm-global-section' );
-    add_settings_field( 'chosen-style', 'Style', array($this, 'chosen_style_field'), 'qm_global_settings', 'qm-global-section' );
-		add_settings_field( 'custom-style', 'Custom Style', array($this, 'custom_style_template'), 'qm_global_settings', 'qm-global-section' );
+
+    	add_settings_section( 'qm-style-section', 'Style Settings', array($this, 'style_section'), 'qm_style_settings' );
+		add_settings_field( 'chosen-style', 'Style', array($this, 'chosen_style_field'), 'qm_style_settings', 'qm-style-section' );
+		add_settings_field( 'custom-style', 'Custom Style', array($this, 'custom_style_template'), 'qm_style_settings', 'qm-style-section' );
+
+		add_settings_section( 'qm-tweet-section', 'Tweet Settings', array($this, 'tweet_section'), 'qm_tweet_settings' );
+    	add_settings_field( 'enable-tweet', 'Allow Users To Tweet Quote', array($this, 'enable_tweet_field'), 'qm_tweet_settings', 'qm-tweet-section' );
+		add_settings_field( 'link-to-homepage', 'Link to homepage instead of current quote`s page', array($this, 'link_to_homepage_field'), 'qm_tweet_settings', 'qm-tweet-section' );
 	}
+
+
 
 	/**
 	 * Generates Section Text
@@ -71,13 +77,10 @@ class QMGlobalSettingsPage
 	 * @since 4.1.0
 	 * @return void
 	 */
-	public function global_section()
+	public function style_section()
 	{
 		echo 'These settings will affect the way your quotes look through your entire site.';
-		if (isset($_GET["settings-updated"]) && $_GET["settings-updated"])
-		{
-			echo "<h3 style='color:red;'>Settings have been updated!</h3>";
-		}
+
 	}
 
 	/**
@@ -106,6 +109,23 @@ class QMGlobalSettingsPage
     <?php
 	}
 
+
+	/**
+	 * Generates Section Text
+	 *
+	 * Generates the section text.
+	 *
+	 * @since 4.1.0
+	 * @return void
+	 */
+	public function tweet_section()
+	{
+		echo 'These settings will affect the way your quotes look through your entire site.';
+
+	}
+
+
+
   /**
 	 * Generates Setting Field For Enable Tweet
 	 *
@@ -128,6 +148,27 @@ class QMGlobalSettingsPage
     <?php
 	}
 
+	/**
+	   * Generates Setting Field For Link-To-Homepage-Selector
+	   *
+	   * @since 4.1.0
+	   * @return void
+	   */
+	  public function link_to_homepage_field ()
+	  {
+		  $settings = (array) get_option( 'qm-settings' );
+		  $link_to_homepage = '0';
+		  if ( isset( $settings['link_to_homepage'] ) ) {
+			  $link_to_homepage = $settings['link_to_homepage'];
+		  }
+	  $checked = '';
+	  if ( $link_to_homepage == '1' ) {
+		$checked = " checked='checked'";
+	  }
+	  ?>
+	  <input type="checkbox" name="qm-settings[link_to_homepage]" id="qm-settings[link_to_homepage]" value="1"<?php echo $checked; ?> />
+	  <?php
+	  }
 	/**
 	 * Generates Setting Field For Style
 	 *
@@ -160,10 +201,25 @@ class QMGlobalSettingsPage
 		?>
 		<div class="wrap">
         <h2>Settings</h2>
+<?php
+
+if (isset($_GET["settings-updated"]) && $_GET["settings-updated"])
+{
+	echo "<h3 style='color:red;'>Settings have been updated!</h3>";
+}
+ ?>
+
+		<?php do_settings_sections( 'qm_global_settings' ); ?>
+
         <form action="options.php" method="POST">
             <?php settings_fields( 'qm-settings-group' ); ?>
-            <?php do_settings_sections( 'qm_global_settings' ); ?>
-            <?php submit_button(); ?>
+
+
+			<?php do_settings_sections( 'qm_style_settings' ); ?>
+			<?php do_settings_sections( 'qm_tweet_settings' ); ?>
+
+
+			<?php submit_button(); ?>
         </form>
     </div>
 		<?php
