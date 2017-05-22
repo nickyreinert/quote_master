@@ -65,6 +65,8 @@ class QMGlobalSettingsPage
 		add_settings_section( 'qm-tweet-section', 'Tweet Settings', array($this, 'tweet_section'), 'qm_tweet_settings' );
     	add_settings_field( 'enable-tweet', 'Allow Users To Tweet Quote', array($this, 'enable_tweet_field'), 'qm_tweet_settings', 'qm-tweet-section' );
 		add_settings_field( 'link-to-homepage', 'Link to homepage instead of current quote`s page', array($this, 'link_to_homepage_field'), 'qm_tweet_settings', 'qm-tweet-section' );
+		add_settings_field( 'shorten_author', 'If you add author`s role / function / occupation behind the name, separated with a comma, activate this checkbox to remove this additional info when you tweet the quote', array($this, 'shorten_author'), 'qm_tweet_settings', 'qm-tweet-section' );
+
 	}
 
 
@@ -169,6 +171,31 @@ class QMGlobalSettingsPage
 	  <input type="checkbox" name="qm-settings[link_to_homepage]" id="qm-settings[link_to_homepage]" value="1"<?php echo $checked; ?> />
 	  <?php
 	  }
+
+
+	    /**
+	  	 * Generates Setting Field For Enable Tweet
+	  	 *
+	  	 * @since 4.1.0
+	  	 * @return void
+	  	 */
+	  	public function shorten_author()
+	  	{
+	  		$settings = (array) get_option( 'qm-settings' );
+	  		$shorten_author = '0';
+	  		if ( isset( $settings['shorten_author'] ) ) {
+	  			$shorten_author = $settings['shorten_author'];
+	  		}
+	      $checked = '';
+	      if ( $shorten_author == '1' ) {
+	        $checked = " checked='checked'";
+	      }
+	      ?>
+	      <input type="checkbox" name="qm-settings[shorten_author]" id="qm-settings[shorten_author]" value="1"<?php echo $checked; ?> />
+	      <?php
+	  	}
+
+
 	/**
 	 * Generates Setting Field For Style
 	 *

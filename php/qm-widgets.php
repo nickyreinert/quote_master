@@ -109,19 +109,26 @@ class QM_Widget extends WP_Widget {
      		{
           $my_query->the_post();
           $shortcode_each = '<div class="qm_quote_widget">';
-            $tweet = '';
+
             $quote_text = apply_filters('qm_quote_text', get_the_content());
-            $tweet = strip_tags($quote_text);
             $shortcode_each .= "<span class='qm_quote_widget_text'>$quote_text</span>";
 
             $author = get_post_meta(get_the_ID(),'quote_author',true);
             if ($author != '')
             {
-              $author = " ~".$author;
-              $author = apply_filters('qm_author_text', $author);
-              $tweet .= $author . ' ';
-              $shortcode_each .= "<span class='qm_quote_widget_author'>$author</span>";
-            }
+
+				$author = ' ~ '.$author;
+				$author = apply_filters('qm_author_text', $author);
+				$shortcode_each .= "<span class='qm_quote_widget_author'>$author</span>";
+
+		        if ( isset( $settings['shorten_author'] ) && $settings['shorten_author'] == '1' )
+				{
+					$authorArr = explode(',', $author);
+					if (array_key_exists(0, $authorArr)) {
+						$author = trim($authorArr[0]);
+					}
+				}
+			}
 
             $source = get_post_meta(get_the_ID(),'source',true);
             if ($source != '')
@@ -131,21 +138,44 @@ class QM_Widget extends WP_Widget {
               $shortcode_each .= "<span class='qm_quote_widget_source'>$source</span>";
             }
 
-            if ( isset( $settings['enable_tweet'] ) && $settings['enable_tweet'] == '1' ) {
+            if ( isset( $settings['enable_tweet'] ) && $settings['enable_tweet'] == '1' )
+			{
 
 				if ( isset( $settings['link_to_homepage'] ) && $settings['link_to_homepage'] == '1' ) {
 
-					$backlink = $_SERVER['HTTP_HOST'];
+					$backlink = ' ~ '. $_SERVER['HTTP_HOST'];
 
 				} else {
 
-					$backlink = "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'];
+					$backlink = ' ~ ' . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'];
 				}
 
-			  $tweet .= $backlink;
-			  $tweet = apply_filters('qm_tweet_text', $tweet);
-              $shortcode_each .= "<a target=\"_blanK\" href='https://twitter.com/intent/tweet?text=".esc_html($tweet)."' class='qm_quote_tweet'>Tweet</a>";
-            }
+				$clean_quote_text = esc_html(strip_tags($quote_text));
+
+
+				if (strlen($clean_quote_text . $author . $backlink) > 140) {
+
+					// why - 6 you might ask?
+					// for some yet unknown reason, www. in front of the
+					// back link counts for 6 chars for twitter - don't ask
+					// why, i double checked it :/
+
+					$maxTweetLength = 140 - 6 - strlen($author . $backlink . ' [...] ');
+
+					$tweet = substr($clean_quote_text, 0, $maxTweetLength) . ' [...] ';
+					$tweet .= $author;
+					$tweet .= $backlink;
+
+
+				} else {
+
+					$tweet = $clean_quote_text . $author . $backlink;
+
+				}
+
+				$shortcode_each .= "<a target=\"_blanK\" href='https://twitter.com/intent/tweet?text=".$tweet."' class='qm_quote_tweet'>Tweet</a>";
+
+			}
 
           $shortcode_each .= '</div>';
           $shortcode .= apply_filters('qm_display_quote', $shortcode_each, get_the_ID());
